@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.background{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('img/nmamit.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.login{
+   position: relative;
+   top: 14vh;
+   left: 40vw;
+}
+
+.content{
+    position:relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    border-radius: 10px;
+    z-index: 990;
+    background: rgba(114, 114, 114, 0.555);
+    box-shadow: 1.5px -1.5px 28px 10px rgba(0, 0, 0, 0.373);
+
+}
+
+.content img{
+    width: 70px;
+    display: block;
+    margin-bottom: 60px;
+    margin-left: 135px;
+    border-radius: 12px;
+}
+
+.field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    background: rgb(255, 255, 255,0.94);
+    display: flex;
+    border-radius: 10px;
+}
+
+.field span{
+    color:#222;
+    width:40px;
+    line-height: 45px;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family:'Poppins',sans-serif;
+    border: none;
+}
+.space{
+    margin-top: 16px;
+}
+.space1{
+    margin-top: 16px;
+    background-color: rgb(26, 103, 248);
+    color: #ffff;
+    font-weight: bold;
+    border: 2px solid rgb(11, 46, 79);
+}
+.forgtet-pass a{
+    color: #ffff;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+}
+.forgtet-pass a:hover{
+    text-decoration: underline;
+    
+}
+.input{
+    margin-top: 16px;
+}
+.space1:hover{
+    background: rgb(52, 179, 234);
+    border:1px solid black;
+}

@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+
+:root {
+  --primary: #ffef96;
+  --secondary: #ff8c6b;
+  --secondary-light: rgba(58, 13, 223, 0.734);
+  --secondary-light-2: rgba(161, 0, 53, 0.1);
+  --green: #3ec70b;
+  --white: #fff;
+  --grey: #444444;
+  --black: #000;
+  
+}
+html, body {
+  margin:0;
+  height:100%;
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+
+.profile-card {
+  position: relative;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25rem;
+  background-color: var(--secondary);
+  clip-path: polygon(0 0, 100% 0, 100% 14%, 0 45%);
+  z-index: -1;
+}
+
+.profile-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+}
+
+.profile-card-top i {
+  cursor: pointer;
+}
+
+.profile-card-top div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.5rem;
+}
+
+.profile-card-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.profile-pic {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  background-image: url(./img/profile.jpg);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 8px 5px var(--primary);
+}
+
+.profile-pic i {
+  position: absolute;
+  right: 0;
+  top: 6.5rem;
+  font-size: 1.2rem;
+  color: var(--green);
+}
+
+.profile-card-middle h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.profile-card-middle h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--grey);
+}
+
+.profile-card-middle p {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--grey);
+}
+
+.social-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+.social-data div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--secondary);
+}
+
+.social-data div span {
+  color: var(--grey);
+}
+
+.performance {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.performance h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.performance-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0.5rem;
+}
+
+.performance-list li {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.performance-list li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.performance-list li a:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary-light-2);
+}
+
+.clubs {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.clubs h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.clubs-list li {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.clubs-list li a {
+  display: inline;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.clubs-list li a:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary-light-2);
+}
+
+.clubs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.imgcontainer{
+ margin-top: 2%;
+width: 100%;
+height: 205px;
+}
+
+.column{
+    float:left;
+    padding-left: 33.3%;
+    padding-top: 20%;
+}
+
+.row{
+   display:flex;
+   align-items: center;
+   justify-content: space-around; 
+}
+
+.column img{
+    height: 80px;
+    width: 80px;
+    background-color: yellow;
+  
+}
+
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.social-icons div {
+  border: 1px solid var(--secondary);
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--secondary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons div:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.profile-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.profile-card-bottom a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 0.7rem 2.5rem;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+.profile-card-bottom .hire-me {
+  color: var(--white);
+  border: 1px solid transparent;
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile-card-bottom .hire-me:hover {
+  color: var(--secondary);
+  background-color: var(--white);
+  border: 1px solid var(--secondary);
+}
+
+.profile-card-bottom .follow {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile-card-bottom .follow:hover {
+  color: var(--grey);
+  background-color: var(--secondary);
+}
