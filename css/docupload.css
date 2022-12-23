@@ -10,10 +10,15 @@ body{
 }
 .container{
     background-color: #e2e2e2;
-    
     width: 370px;
     height: 150%;
     margin-left:35% ;
+}
+
+.containercon{
+    background-color: #fff;
+    width: 90%;
+    margin-left: 20px;
 }
 .heading{
     text-align: center;

@@ -35,36 +35,17 @@
     </div>
     <hr class="hr2">
 
+
     <p class="p2">Document Uploads Section</p>
-    <form action="POST">
-    <div class="flcontainer">
-        
-        <p class="p3">Attendance Proof docs:</p>
-        <div class="lcontainer">
-        <label for="att"><span id="imgname"></span>
-        <input id="att" type="file"></label>
-    </div>
-    </div>
-  
-    <div class="flcontainer">
-        <p class="p3">Internship Completion docs:</p>
-        <div class="lcontainer">
-        <label for="att2"><span id="imgname2"></span>
-        <input id="att2" type="file"></label>
-    </div>
-    </div>
-  
-    <div class="flcontainerd">
-        <p class="p3">Course Completion docs:</p>
-        <div class="lcontainer">
-        <label for="att3"><span id="imgname3"></span>
-        <input id="att3" type="file"></label>
-    </div>
+     <?php
+         if(isset($_GET['error'])):?> 
+         <p><?php echo $_GET['error']; ?></p>
+         <?php endif ?>
 
-    </div>
-    <input class="sub" type="submit" value="SUBMIT">
-</form>
-
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <input class="sub" type="submit" name="submit" value="Upload" />
+    </form>
  </div> 
  <script type="text/javascript" src="docupload.js"></script>
 </body>

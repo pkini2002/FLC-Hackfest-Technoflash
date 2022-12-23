@@ -9,8 +9,8 @@
   --white: #fff;
   --grey: #444444;
   --black: #000;
-  
 }
+
 html, body {
   margin:0;
   height:100%;
@@ -81,7 +81,7 @@ html, body {
   background-size: cover;
   cursor: pointer;
   margin-bottom: 0.5rem;
-  background-image: url(./img/profile.jpg);
+  background-image: url(img/profile.jpg);
   transition: box-shadow 0.3s ease-in-out;
 }
 

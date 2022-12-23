@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
     <style>
-        <?php include 'css/profile.scss'; ?>
+        <?php include 'css/profile.css'; ?>
     </style>
   </head>
   <div class="bg-container">
