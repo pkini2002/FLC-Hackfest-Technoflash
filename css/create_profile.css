@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: Prompt, sans-serif
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background: #E9EFF2;
+}
+
+a{
+  color: #3461FD;
+  text-decoration: none;
+}
+
+a:hover, a:focus{
+  text-decoration: underline;
+}
+
+.container{
+  max-width: 1090px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-title{
+  font-weight: 600;
+  font-size: 2rem;
+  color: #f2b065;
+}
+
+.page-desc{
+  font-weight: 400;
+  font-size: 1rem;
+  color: #404040;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 20rem;
+  width: 100%;
+  position: relative;
+  gap: .5rem;
+}
+
+.form input:not(.btn){
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  padding: .75rem 1rem;
+  border: 1px solid #F9FBFC;
+  background: #F9FBFC;
+  border-radius: .5rem;
+  transition: all .25s ease 0s;
+  color: #212325;
+  box-shadow: 1px 2px 4px 0px #0b163c40;
+}
+
+.form input:focus:not(.btn){
+  border-color: #3461FD;
+  box-shadow: 1px 2px 4px 0px #0b163c40, 0 0 0 3px #3461FD80;
+}
+
+.btn{
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: .75rem 1rem;
+  border: 1px solid #f2b065;;
+  background: #f2b065;
+  border-radius: .5rem;
+  transition: all .25s ease 0s;
+  color: #E9EFF2;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 0px #3461FD40;
+}
+
+.btn:hover, .btn:focus{
+  background: #eba04c;;
+  border-color: #f2b065;
+  box-shadow: 0px 3px 5px 0px #3461FD40, 0 0 0 3px #3461FD80;
+}
+
+.forgot-link{
+  font-size: .85rem;
+  width: 100%;
+  text-align: end;
+}
+
+.form-link-holder{
+  font-size: .9rem;
+  color: #404040;
+}
+
+.error-noti{
+  background: #DC3535;
+  padding: 1rem;
+  max-width: 20rem;
+  width: 100%;
+  border-radius: .5rem;
+  color: #E9EFF2;
+  box-shadow: 0px 3px 5px 0px #3461FD40;
+}
+
+.error-input{
+  border-color: #DC3535 !important;
+}
+
+.error-input:focus{
+  box-shadow: 1px 2px 4px 0px #0b163c40, 0 0 0 3px #DC353580 !important;
+}

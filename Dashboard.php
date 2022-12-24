@@ -75,12 +75,12 @@
           <h3><u>Performance</u></h3>
           <ul class='performance-list'>
             <li>
-            <a href='#' id='button' class='button'>Report card</a>
+            <a href='newdashboard.php' id='button' class='button'>Report card</a>
             </li>
             
            
             <li>
-              <a href='certificates/Aditi-Shukla-12-14-2022.pdf'>Certificates</a>
+              <a href='newdashboard.php'>Certificates</a>
               </li>
               <li>
               <a href='logout.php'>Logout</a>
@@ -126,64 +126,6 @@
       </div>
       
     </div>
-    <div class='bg-model'>
-    <div class='model-content'>
-        <h1 style='position: absolute;
-        top: 2%;
-        text-decoration: underline;'>Report Card</h1>
-        <table border='1' class='centerTable' >
-            <tr>
-                <th ><p style='color: black;'>SUBJECT</p> </th>
-                <th><p style='color: black;'>MSE1</p></th>
-                <th ><p style='color: black;'>MSE2</p></th>
-                <th ><p style='color: black;'>CLASSES HELD</p></th>
-                <th ><p style='color: black;'>CLASSES ATTENDED</p></th>
-            </tr>
-
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-
-        </table>
-        <div class='close'>+</div>
-    </div>
-</div>
     "
   ;}
   else 
@@ -193,6 +135,5 @@
   }
   
   ?>
-  <script src="js/popup.js"></script>
   </body>
 </html>
