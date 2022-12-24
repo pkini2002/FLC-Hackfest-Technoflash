@@ -103,15 +103,41 @@
     <hr class="hr2">
 
 
-    <p class="p2">Document Uploads Section</p>
+   
      <?php
          if(isset($_GET['error'])):?> 
          <p><?php echo $_GET['error']; ?></p>
          <?php endif ?>
 
     <form action="upload.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file" />
+
+    <!-- Document upload section -->
+    <p class="p2"><b>Document Uploads Section</b></p>
+    <br/>
+    <br/>
+    <center>
+    <div style="background-color:#c3c4c7; width:80%;height:80px; padding:4px;">
+    <p>Attendance Proof Docs</p>
+    <br/>
+    <input type="file" name="file1" />
+    </div>
+    <br/>
+    
+    <div style="background-color:#c3c4c7; width:80%;height:80px; padding:4px;">
+    <p>Internship Completion Docs</p>
+    <br/>
+    <input type="file" name="file2" />
+    </div>
+
+    <br/>
+
+    <div style="background-color:#c3c4c7; width:80%;height:80px; padding:4px;">
+    <p>Course Completion Docs</p>
+    <br/>
+    <input type="file" name="file3" />
+    </div>
     <input class="sub" type="submit" name="submit" value="Upload" />
+    </center>
     </form>
  </div> 
  <script type="text/javascript" src="docupload.js"></script>

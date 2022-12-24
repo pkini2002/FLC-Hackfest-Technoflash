@@ -5,33 +5,36 @@ $statusMsg = '';
 
 // File upload path
 $targetDir = "uploads/";
-$fileName = basename($_FILES["file"]["name"]);
+$fileName = basename($_FILES["file1"]["name"]);
+$fileName1 = basename($_FILES["file2"]["name"]);
+$fileName2 = basename($_FILES["file3"]["name"]);
 $targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+$targetFilePath1 = $targetDir . $fileName1;
+$targetFilePath2 = $targetDir . $fileName2;
 
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    // Allow certain file formats
-    $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            // Insert image file name into database
-            $insert = $conn->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
-        }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-    }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+if(isset($_POST["submit"])){
+     $file1=$_FILES['file1']['name'];
+     $file_temp1=$_FILES['file1']['tmp_name'];
+     $file2=$_FILES['file2']['name'];
+     $file_temp2=$_FILES['file2']['tmp_name'];
+     $file3=$_FILES['file3']['name'];
+     $file_temp3=$_FILES['file3']['tmp_name'];
+
+     $data=[];
+     $data=[$file1,$file2,$file3];
+     $images=implode('',$data);
+
+    $query="INSERT into images (file_name, uploaded_on) VALUES ('".$images."', NOW())";
+    $connect=mysqli_query($conn,$query);
+    if($connect){
+        move_uploaded_file($_FILES["file1"]["tmp_name"], $targetFilePath);
+        move_uploaded_file($_FILES["file2"]["tmp_name"], $targetFilePath1);
+        move_uploaded_file($_FILES["file3"]["tmp_name"], $targetFilePath2);
+        echo "The files has been uploaded successfully!";
     }
-}else{
-    $statusMsg = 'Please select a file to upload.';
+    else{
+        echo "Failed";
+    }
 }
-
-// Display status message
 echo $statusMsg;
 ?>
