@@ -8,7 +8,7 @@
         <?php include 'css/docupload.css'; ?>
     </style>
 
-    <title>Document</title>
+    <title>Document Upload</title>
 </head>
 <body>
  <div class="container">

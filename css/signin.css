@@ -17,7 +17,8 @@ main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #ff8c6b;
+  /* background-color: #ff8c6b; */
+  background-color: #11101d;
   padding: 2rem;
   display: flex;
   align-items: center;

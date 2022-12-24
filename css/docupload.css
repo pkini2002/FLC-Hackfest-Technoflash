@@ -4,7 +4,8 @@
     box-sizing: content-box;
 }
 body{
-    background: white;
+    /* background: white; */
+    background-color: #11101d;
     margin: 20px;
 }
 .container{

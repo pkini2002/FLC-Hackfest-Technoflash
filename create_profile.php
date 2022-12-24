@@ -7,7 +7,7 @@
     <link rel='stylesheet' href='css/create_profile.css' />
     <title>Create Profile</title>
 </head>
-<body class='container'>
+<body class='container' style="background-color: #11101d;">
 <h1 class='page-title'>
     Welcome! Create your profile page
   </h1>
