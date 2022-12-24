@@ -20,6 +20,8 @@ if(isset($_POST["submit"])){
      $file3=$_FILES['file3']['name'];
      $file_temp3=$_FILES['file3']['tmp_name'];
 
+     $usn=$_POST['usn'];
+
     //Checkbox logic
     $ids=$_POST['ids'];
     
@@ -32,7 +34,7 @@ if(isset($_POST["submit"])){
     $images=implode('',$data);
 
     // Query
-    $query="INSERT into images (file_name, uploaded_on,clubs) VALUES ('".$images."', NOW(),'". $val."')";
+    $query="INSERT into images (USN,file_name, uploaded_on,clubs) VALUES ('".$usn."','".$images."', NOW(),'". $val."')";
     $connect=mysqli_query($conn,$query);
 
     if($connect){

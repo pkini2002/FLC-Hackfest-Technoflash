@@ -21,6 +21,20 @@
             <div class="column">
             <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <ul>
+                <li>
+                <input type='text' class='form-input' placeholder='Enter your usn' name='usn'
+                style="width: 100%;
+                display: block;
+                font-size: 1rem;
+                padding: .75rem 1rem;
+                border: 1px solid #F9FBFC;
+                background: #F9FBFC;
+                border-radius: .5rem;
+                transition: all .25s ease 0s;
+                color: #212325;
+                box-shadow: 1px 2px 4px 0px #0b163c40;">
+                </li>
+                <br/>
                     <li>
                       <input type="checkbox" id="myCheckbox1" name="ids[]" value="FLC" />
                       <label for="myCheckbox1"><img src="img/download.png" alt=""></label>
@@ -108,7 +122,7 @@
      <?php
          if(isset($_GET['error'])):?> 
          <p><?php echo $_GET['error']; ?></p>
-         <?php endif ?>
+     <?php endif ?>
 
  
 
