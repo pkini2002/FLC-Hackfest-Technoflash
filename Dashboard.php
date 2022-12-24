@@ -36,8 +36,8 @@
   <div class='bg-container'>
   </div>
   
-  <body
-  background='https://www.marshallsindia.com/ImageBuckets/ItemImages/ZA%201903.jpg?id=75'>
+  <body>
+  <section>
     <div class='profile-card'>
       <div class='backdrop'></div>
       <div class='profile-card-top'>
@@ -75,7 +75,7 @@
           <h3><u>Performance</u></h3>
           <ul class='performance-list'>
             <li>
-              <a href='markpage.html'>Report Card</a>
+            <a href='#' id='button' class='button'>Report card</a>
             </li>
             
            
@@ -126,14 +126,73 @@
       </div>
       
     </div>
+    <div class='bg-model'>
+    <div class='model-content'>
+        <h1 style='position: absolute;
+        top: 2%;
+        text-decoration: underline;'>Report Card</h1>
+        <table border='1' class='centerTable' >
+            <tr>
+                <th ><p style='color: black;'>SUBJECT</p> </th>
+                <th><p style='color: black;'>MSE1</p></th>
+                <th ><p style='color: black;'>MSE2</p></th>
+                <th ><p style='color: black;'>CLASSES HELD</p></th>
+                <th ><p style='color: black;'>CLASSES ATTENDED</p></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+        </table>
+        <div class='close'>+</div>
+    </div>
+</div>
     "
   ;}
-    else 
+  else 
   {
     echo "<h2 style='color:blue;'>It seems like you are not registerd:
    <a id='moving' href='login.php'> <button type='button'style='color:green;'>click here</button></a></h2>";
   }
   
   ?>
+  <script src="js/popup.js"></script>
   </body>
 </html>
