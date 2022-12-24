@@ -5,6 +5,8 @@ $targetDir = "uploads/";
 $fileName = basename($_FILES['file']['name']);
 $targetFilePath = $targetDir . $fileName;
 
+include 'starter.php';
+
    if(isset($_POST["submit"])){
         $name1=$_POST['name'];
         $usn=$_POST['usn'];
@@ -27,12 +29,49 @@ $targetFilePath = $targetDir . $fileName;
     $connect=mysqli_query($conn,$query);
 
     if($connect){
-        echo "Connected";
+        echo "
+        <div class='card container shadow p-3 mb-5 bg-body rounded' style='width: 65%;margin-top: 150px;'>
+               
+       <div class='container'>
+       <div class='form-group' style='text-align: center;'>
+            <br>
+            <strong class='warning-text' style='position: relative;left: 1%;' > 
+            There was some error in filling the form! Please fill again      
+            </strong><br/>
+           <br>
+            <button class='btn btn-danger delete-post' style='width:200px;position: relative;left: 1%;''>
+            <a href='create_profile.php' style='text-decoration:none;color:#fff;'>
+            Go to Dashboard
+            </a>
+            </button>
+        </div>
+        </div>
+       </div>
+        
+        ";
         move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath);
     }
     else{
-        echo "Cant conn";
+        echo "
+        <div class='card container shadow p-3 mb-5 bg-body rounded' style='width: 65%;margin-top: 150px;'>
+               
+       <div class='container'>
+       <div class='form-group' style='text-align: center;'>
+            <br>
+            <strong class='warning-text' style='position: relative;left: 1%;' >       
+            The files has been uploaded successfully!</strong><br/>
+           <br>
+            <button class='btn btn-danger delete-post' style='width:200px;position: relative;left: 1%;''>
+            <a href='newdashboard.php' style='text-decoration:none;color:#fff;'>
+            Go to Dashboard
+            </a>
+            </button>
+        </div>
+        </div>
+       </div>
+        
+        ";
     }
-   }
-//    echo "Done";
+include 'end.php';
+}
 ?>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,16 +67,14 @@ if($flag)
 <br>
 <br>
 <div class="field space">
-                <span class="fa fa-lock"></span>
-                <input type="password" name="Password" placeholder="Password" required>
-                
-            </div>
-            <br><br>
-                <div class="btn" style="width: 100%;"><input type="submit" value="Login"></div>
-                <br>
-
-            </div>
-          </form>
-        </div>
+    <span class="fa fa-lock"></span>
+    <input type="password" name="Password" placeholder="Password" required>            
+</div>
+<br><br>
+    <div class="btn" style="width: 100%;"><input type="submit" value="Login"></div>
+<br>
+</div>
+</form>
+</div>
 </body>
 </html>

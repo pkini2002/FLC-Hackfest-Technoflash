@@ -48,7 +48,7 @@
                echo '<img src="uploads/'.$img1.'" style="height: 160px;">';
                echo "<br/>";
                $name=$row['name1'];
-               echo "<b> Welcome ". $name. "</b>";
+               echo "<b>  Welcome ". $name. "</b>";
                echo "<br/>";
                $desc=$row['description1'];
                echo $desc;
@@ -76,12 +76,12 @@
            <br/>
            <ul class='performance-list'>
              <li>
-             <a href='newdashboard.php' id='button' class='button'>Report card</a>
+             <a href='newdashboard.php' id='button' class='button bt'>Report card</a>
              </li>
              
             
              <li>
-               <a href='newdashboard.php'>Certificates</a>
+               <a href='newdashboard.php' class='bt'>Certificates</a>
                </li>
                <li>
                <a href='logout.php'>Logout</a>

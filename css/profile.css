@@ -14,6 +14,8 @@
 html, body {
   margin:0;
   height:100%;
+  background-color: #11101d;
+  color: #fff;
 }
 
 * {
@@ -106,7 +108,12 @@ html, body {
 .profile-card-middle h2 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--grey);
+  /* color: var(--grey); */
+  color: #fff;
+}
+
+.bt{
+  color: #fff;
 }
 
 .profile-card-middle p {
@@ -115,7 +122,8 @@ html, body {
   padding-bottom: 1rem;
   font-size: 0.9rem;
   text-align: center;
-  color: var(--grey);
+  /* color: var(--grey); */
+  
 }
 
 .social-data {
