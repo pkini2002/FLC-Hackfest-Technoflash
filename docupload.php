@@ -19,9 +19,10 @@
     <div class="imgcontainer">
         <div class="row">
             <div class="column">
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox1" />
+                      <input type="checkbox" id="myCheckbox1" name="ids[]" value="FLC" />
                       <label for="myCheckbox1"><img src="img/download.png" alt=""></label>
                     </li>
                     <li>
@@ -31,7 +32,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox2" />
+                      <input type="checkbox" id="myCheckbox2" name="ids[]" value="Authorcraft" />
                       <label for="myCheckbox2"><img src="img/autho1.png" alt=""></label>
                     </li>
                     <li>
@@ -41,7 +42,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox3" />
+                      <input type="checkbox" id="myCheckbox3" name="ids[]" value="Stereo" />
                       <label for="myCheckbox3"><img src="img/stereo.jpg" alt=""></label>
                     </li>
                     <li>
@@ -51,7 +52,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox4" />
+                      <input type="checkbox" id="myCheckbox4" name="ids[]" value="Aero" />
                       <label for="myCheckbox4"><img src="img/unnamed.jpg" alt=""></label>
                     </li>
                     <li>
@@ -61,7 +62,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox5" />
+                      <input type="checkbox" id="myCheckbox5" name="ids[]" value="Ace" />
                       <label for="myCheckbox5"><img src="img/cs-ace (1).jpg" alt=""></label>
                     </li>
                     <li>
@@ -71,7 +72,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox6" />
+                      <input type="checkbox" id="myCheckbox6" name="ids[]" value="Rachana" />
                       <label for="myCheckbox6"><img src="img/rachana.jpg" alt=""></label>
                     </li>
                     <li>
@@ -81,7 +82,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox7" />
+                      <input type="checkbox" id="myCheckbox7" name="ids[]" value="NitteBlues" />
                       <label for="myCheckbox7"><img src="img/football.jpg" alt=""></label>
                     </li>
                     <li>
@@ -91,7 +92,7 @@
             <div class="column">
                 <ul>
                     <li>
-                      <input type="checkbox" id="myCheckbox8" />
+                      <input type="checkbox" id="myCheckbox8" name="ids[]" value="Robotics" />
                       <label for="myCheckbox8"><img src="img/White Logo.png" alt=""></label>
                     </li>
                     <li>
@@ -109,7 +110,7 @@
          <p><?php echo $_GET['error']; ?></p>
          <?php endif ?>
 
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
+ 
 
     <!-- Document upload section -->
     <p class="p2"><b>Document Uploads Section</b></p>
