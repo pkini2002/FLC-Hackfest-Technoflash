@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
     //  File storage value
     $data=[];
     $data=[$file1,$file2,$file3];
-    $images=implode('',$data);
+    $images=implode(',',$data);
 
     // Query
     $query="INSERT into images (USN,file_name, uploaded_on,clubs) VALUES ('".$usn."','".$images."', NOW(),'". $val."')";
@@ -53,7 +53,7 @@ if(isset($_POST["submit"])){
             <strong class='warning-text' style='position: relative;left: 1%;' >       
             The files has been uploaded successfully!</strong><br/>
            <br>
-            <button class='btn btn-danger delete-post' style='width:200px;position: relative;left: 1%;''>
+            <button class='btn btn-success delete-post' style='width:200px;position: relative;left: 1%;''>
             <a href='newdashboard.php' style='text-decoration:none;color:#fff;'>
             Go to Dashboard
             </a>

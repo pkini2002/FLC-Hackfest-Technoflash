@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login in</title>
         <link rel="stylesheet" href="css/newlogin.css">
-        <script src="https://kit.fontawesome.com/5f457fcfc1.js" crossorigin="anonymous"></script>
-       
-       
+        <script src="https://kit.fontawesome.com/5f457fcfc1.js" crossorigin="anonymous"></script>    
     </head>
     <body>
       <?php

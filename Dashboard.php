@@ -26,7 +26,9 @@
     <div class='profile-card'>
       <div class='backdrop'></div>
       <div class='profile-card-top'>
+       <a href='newdashboard.php'>
         <i class='fa-solid fa-arrow-left-long'></i>
+        </a>
         <div>
           <i class='fa-solid fa-ellipsis-vertical'></i>
         </div>
@@ -76,15 +78,14 @@
            <br/>
            <ul class='performance-list'>
              <li>
-             <a href='newdashboard.php' id='button' class='button bt'>Report card</a>
+             <a href='newdashboard.php' id='button' class='button bt' style='color:#fff;'>Report card</a>
              </li>
              
-            
              <li>
-               <a href='newdashboard.php' class='bt'>Certificates</a>
+               <a href='newdashboard.php' class='bt' style='color:#fff;'>Certificates</a>
                </li>
                <li>
-               <a href='logout.php'>Logout</a>
+               <a href='logout.php' style='color:#fff;'>Logout</a>
              </li>
            </ul>
              </div>";

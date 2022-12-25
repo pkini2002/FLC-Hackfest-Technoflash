@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php   
+ include 'db_conn.php';
+ session_start();
+ include 'starter.php';
+?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/newdashboard.css">
     <title>Document</title>
 </head>
@@ -48,19 +56,43 @@
         </ul>
         <div class="profile_content">
             <div class="profile">
-                <div class="profile_details">
-                    <img src="https://vz.cnwimg.com/wp-content/uploads/2014/01/alex.jpg?x86007" alt="">
-                    <div class="name_job">
-                        <div class="name">Name</div>
-                        <div class="job">Role</div>
-                    </div>
-                </div>
                 <i class='bx bx-log-out' id="log_out"></i>
             </div>
         </div>
     </div>
     <div class="home_content">
-        <div class="text">Home Content Here...</div>
+        <?php 
+          $usn=$_SESSION['USN'];
+          $result="select * from `profile` where USN='$usn'";
+          $result_query=mysqli_query($conn,$result);
+          while($row=mysqli_fetch_assoc($result_query)){
+            $name=$row['name1'];
+            echo " <div class='text' style='text-align:center;margin-top:30px;font-size:40px'>Welcome $name!!</div>";
+          }
+          echo "<h3 style='text-align:center;'>Documents Uploaded</h3>";
+        ?>
+         <p></p>
+        <?php
+             $usn=$_SESSION['USN'];
+             $result="select * from `images` where USN='$usn'";
+             $result_query=mysqli_query($conn,$result);
+             while($row=mysqli_fetch_assoc($result_query)){
+                $files_list=$row['file_name'];
+                $indi_file_name=explode(",",$files_list); //used to convert string to an array
+                echo "<div class='row'>";
+                for ($i=0; $i <count($indi_file_name); $i++){
+                   echo "<div class='container col ml-4 p-4 mr-4'  style='background-color:#11101d;'>";
+                   echo "<a href='uploads/$indi_file_name[$i]'>";
+                   echo "<i class='fa-solid fa-file-pdf fa-8x' style='color:red;'>";
+                   echo "</i>";
+                   echo "</a>";
+                   echo "</div>";
+                //    echo "<br/>";
+                }
+                echo "</div>";
+             }
+         ?> 
+    
     </div>
     <script>
         let btn = document.querySelector("#btn");
@@ -74,5 +106,8 @@
             sidebar.classList.toggle("active");
         }
     </script>
+<?php 
+   include 'end.php';
+?>
 </body>
 </html>

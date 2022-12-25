@@ -36,11 +36,11 @@ include 'starter.php';
        <div class='form-group' style='text-align: center;'>
             <br>
             <strong class='warning-text' style='position: relative;left: 1%;' > 
-            There was some error in filling the form! Please fill again      
+            You have succesfully filled the form!     
             </strong><br/>
            <br>
-            <button class='btn btn-danger delete-post' style='width:200px;position: relative;left: 1%;''>
-            <a href='create_profile.php' style='text-decoration:none;color:#fff;'>
+            <button class='btn btn-success delete-post' style='width:200px;position: relative;left: 1%;''>
+            <a href='newdashboard.php' style='text-decoration:none;color:#fff;'>
             Go to Dashboard
             </a>
             </button>
