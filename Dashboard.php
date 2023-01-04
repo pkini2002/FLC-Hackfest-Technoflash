@@ -61,10 +61,6 @@
          </p>
          <div class='social-data'>
            <div>
-             <h5>Attendance</h5>
-             <span>87%</span>
-           </div>
-           <div>
              <h5>CGPA</h5>
              <span>9.4</span>
            </div>
@@ -103,12 +99,84 @@
               <div class='imgcontainer'>
                 <div class='row'>";  
                 $clubs=$row['clubs'];
-                echo $clubs;        
+                $res=explode(',',$clubs);
+                // echo $clubs;
+                
+                // echo $clubs; 
+                foreach ($res as $club) {
+                  if($club == 'FLC'){
+                    echo "<img src='img/download.png' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+                  if($club == 'Stereo'){
+                    echo "<img src='img/stereo.jpg' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+                  if($club == 'Ace'){
+                    echo "<img src='img/cs-ace.jpg' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+                  if($club == 'Authorcraft'){
+                    echo "<img src='img/autho1.png' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+
+                  if($club == 'Aero'){
+                    echo "<img src='img/unnamed.jpg' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+
+                  if($club == 'Rachana'){
+                    echo "<img src='img/rachana.jpg' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+
+                  if($club == 'NitteBlues'){
+                    echo "<img src='img/football.jpg' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+
+                  if($club == 'Robotics'){
+                    echo "<img src='img/White Logo.png' width='80' height='70'>";
+                    echo "&nbsp;&nbsp;";
+                  }
+                    echo "<br/>";
+                }
+                       
                 echo "</div>
             </div>
       </div> 
       </div>";
-        }     
+        }    
+        
+      //Socials
+      $result="select * from `profile` where USN='$usn'";
+      $result_query=mysqli_query($conn,$result);
+      while($row=mysqli_fetch_assoc($result_query)){
+      $linkedin_url=$row['linkedinurl'];
+      $email_url=$row['emailurl'];
+      $github_url=$row['githuburl'];
+      echo "
+      <div class='social-icons'>
+      <div>
+        <a href='$linkedin_url'>
+        <i class='fa-brands fa-linkedin'></i>
+        </a>
+      </div>
+
+      <div>
+          <a href='$email_url'>
+          <i class='fas fa-envelope'></i>
+          </a>
+      </div>
+    
+      <div>
+        <a href='$github_url'>
+        <i class='fa-brands fa-github'></i>
+        </a>
+      </div>
+    </div>";
+      } 
 }
 ?>
 

@@ -20,7 +20,7 @@
           @$usernam=$_POST['AdminId'];
           @$Password=$_POST['Password'];
           $sql8="SELECT * FROM `adminlogin2537` WHERE `AdminId` ='$usernam'";
-          $data8=mysqli_query($link,$sql8);
+          $data8=mysqli_query($conn,$sql8);
           while($fetch2=mysqli_fetch_assoc($data8))
          {
                $username=$fetch2['AdminId'];
