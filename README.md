@@ -22,7 +22,11 @@ Database - `MySQL`
 
 Code Editor - `VSCode`
 
-<br/>To run the project :- 
+## Figma Design File
+
+<a href="https://drive.google.com/drive/u/0/folders/1k2eTT4cJ1g9lIhgD5j9JNkvrxRPohUfL" target="_blank">Design File </a>
+
+## Software Installation 
 
 **Install Visual Studio Code :** 
 
@@ -94,3 +98,30 @@ git push origin dev-branchname
 ```
 
 **Finally create a pr and wait until your pr will be merged sucessfully!**
+
+## Frontend Team
+- Frontend Project Repo: <a href="https://github.com/SassyAjumma/Technoflash">Frontend-Repo </a>
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="#"><img src="credits/dhanya.jpg" alt="Dhanya" width="100" height="100"/><br /><sub><b>Dhanya</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/ganapathi3689"><img src="credits/ganapati.jpg" width="100" height="100" alt="Ganapathi"/><br /><sub><b>Ganapathi</b></sub></a><br /></td>  
+      <td align="center"><a href="https://jakebolam.com"><img src="credits/mladen.jpg" width="100" height="100" alt="Mladen"/><br /><sub><b>Mladen</b></sub></a><br /></td>
+       <td align="center"><a href="https://github.com/SassyAjumma"><img src="credits/pearl.jpg" width="100" height="100" alt="Pearl"/><br /><sub><b>Pearl Menezes</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/preethampoojary"><img src="credits/preetham.jpg" width="100" height="100" alt="Preetham"/><br /><sub><b>Preetham Poojary</b></sub></a><br /></td>
+         <td align="center"><a href="https://github.com/swapisticated"><img src="credits/swapnil.jpg" width="100" height="100" alt="Swapnil"/><br /><sub><b>Swapnil Sharma</b></sub></a><br /></td>
+    </tr>
+</tbody>
+</table>
+
+## Backend Team
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/pkini2002"><img src="credits/kini.jpg" alt="Prathiksha" width="100" height="100"/><br /><sub><b>Prathiksha Kini</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Vive007"><img src="credits/vivek.jpg" width="100" height="100" alt="Vivek"/><br /><sub><b>Vivek Kumar</b></sub></a><br /></td>  
+    </tr>
+</tbody>
+</table>
+
