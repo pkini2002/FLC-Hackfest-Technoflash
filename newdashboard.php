@@ -87,11 +87,82 @@
                    echo "</i>";
                    echo "</a>";
                    echo "</div>";
-                //    echo "<br/>";
                 }
                 echo "</div>";
              }
+            
+             $marks="select * from `students_detail34` where USN='.$usn.'";
+             $result_query=mysqli_query($conn,$marks);
+
+             while($row=mysqli_fetch_assoc($result_query)){
+                $marks1=$row['21CS301'];
+                $marks2=$row['21CS302'];
+                $marks3=$row['21CS303'];
+                $marks4=$row['21CS304'];
+                $marks5=$row['21HU312'];
+                $tot_marks=$row['CIE'];
+                $mark_obtained=$row['Obtained'];
+                $percentage=$row['PERCENTAGE'];
+                $classes_held=$row['CLASS_HELD'];
+            }
+
+            
+            echo "<table class='table'>
+            <tr>
+               <th>Course Code</th>
+               <th>Max Marks</th>
+               <th>Marks Obtained</th>
+               <th>Class Held</th>
+               <th>Class Attended</th>
+            </tr>
+
+            <tr>
+                 <td>21CS301</td>
+                 <td>50</td>
+                 <td>$marks1</td>
+                 <td>$classes_held</td>
+                 <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS302</td>
+               <td>50</td>
+               <td>$marks2</td>
+               <td>$classes_held</td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS303</td>
+               <td>50</td>
+               <td>$marks3</td>
+               <td>$classes_held</td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS304</td>
+               <td>50</td>
+               <td>$marks4</td>
+               <td>$classes_held</td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21HU312</td>
+               <td>50</td>
+               <td>$marks5</td>
+               <td>$classes_held</td>
+               <td>45</td>
+            </tr>
+            </table>
+            ";
          ?> 
+
+         <?php
+             
+             
+         ?>
     
     </div>
     <script>
