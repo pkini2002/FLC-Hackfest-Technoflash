@@ -104,9 +104,9 @@ git push origin dev-branchname
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="#"><img src="credits/dhanya.jpg" alt="Dhanya" width="100" height="100"/><br /><sub><b>Dhanya</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Dhanya16"><img src="credits/dhanya.jpg" alt="Dhanya" width="100" height="100"/><br /><sub><b>Dhanya</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/ganapathi3689"><img src="credits/ganapati.jpg" width="100" height="100" alt="Ganapathi"/><br /><sub><b>Ganapathi</b></sub></a><br /></td>  
-      <td align="center"><a href="https://jakebolam.com"><img src="credits/mladen.jpg" width="100" height="100" alt="Mladen"/><br /><sub><b>Mladen</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Mladeen"><img src="credits/mladen.jpg" width="100" height="100" alt="Mladen"/><br /><sub><b>Mladen Saldanha</b></sub></a><br /></td>
        <td align="center"><a href="https://github.com/SassyAjumma"><img src="credits/pearl.jpg" width="100" height="100" alt="Pearl"/><br /><sub><b>Pearl Menezes</b></sub></a><br /></td>
         <td align="center"><a href="https://github.com/preethampoojary"><img src="credits/preetham.jpg" width="100" height="100" alt="Preetham"/><br /><sub><b>Preetham Poojary</b></sub></a><br /></td>
          <td align="center"><a href="https://github.com/swapisticated"><img src="credits/swapnil.jpg" width="100" height="100" alt="Swapnil"/><br /><sub><b>Swapnil Sharma</b></sub></a><br /></td>
