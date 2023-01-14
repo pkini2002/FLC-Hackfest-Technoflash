@@ -1,42 +1,71 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang='en'>
   <head>
   <?php 
   include 'db_conn.php';
   session_start();
-
-  if(isset($_SESSION['USN']))
-  {
-  echo "
-   <meta charset='UTF-8' />
-   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-   <title>Profile</title>
-   <link
-    rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
-   />
-   <link rel='icon' type='image/x-icon' href='img/favicon.ico'>
-   <link rel='stylesheet' href='css/profile.css' />
-   </head>
+  // it will work if you create alert message work.
+  // $welcome=$_GET['welcome'];
+  // if($welcome==8436)
+  // { include 'starter.php';
+  //   include 'end.php';
+  //   echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+  //   <strong> successfuly logedin!</strong>
+  //   <br>
+  //   <strong> Welcome Back " .$_SESSION['Name']."</strong>
+  //   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+  //     <span aria-hidden='true'>&times;</span>
+  //   </button>
+  // </div>";
+  // }
+    
+    if(isset($_SESSION['USN']))
+    {
+    echo "
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    
+    <title>Profile</title>
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+    />
+    <link rel='icon' type='image/x-icon' href='img/favicon.ico'>
+        <link rel='stylesheet' href='css/style1.css' />
+  </head>
   <div class='bg-container'>
   </div>
-  <body>
-  <section>
+  
+  <body
+  background='https://www.marshallsindia.com/ImageBuckets/ItemImages/ZA%201903.jpg?id=75'>
     <div class='profile-card'>
       <div class='backdrop'></div>
       <div class='profile-card-top'>
-       <a href='newdashboard.php'>
-        <i class='fa-solid fa-arrow-left-long'></i>
-        </a>
-        <div>
-          <i class='fa-solid fa-ellipsis-vertical'></i>
-        </div>
-      </div>
+    <i class='fa-solid fa-arrow-left-long'></i>
+
+    <div>
+      <ul>
+ 
+        <li>
+          <a href='#'> <i class='fa-solid fa-ellipsis-vertical'></i></a>
+          <ul class='dropdown'>
+           <li><a href='#'><i class='fa fa-home'></i> Home</a></li>
+           <li><a href='#'><i class='fa fa-edit'></i> Edit</a></li>
+           <li><a href='#'><i class='fa fa-id-card'></i> Credit</a></li>
+           <hr>
+           <li><a href='logout.php'><i class='fa fa-sign-out'></i>Logout</a></li>
+          </ul>
+          </li>
+    </div>
+  </div>
       <div class='profile-card-middle'>
         <div class='profile-pic'>
-        
+          <i class='fa-solid fa-circle-check'> 
+          </i>
         </div>
+       
         <h1><u>".$_SESSION['Name']."</u></h1>
         <h2>".$_SESSION['USN']."</h2>
         <br/>

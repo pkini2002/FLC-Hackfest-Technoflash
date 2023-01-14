@@ -1,8 +1,9 @@
 <?php
-    $sname="localhost:4306";
+    $sname="localhost";
     $uname="root";
-    $password="1234";
-    $db_name="test_db";
+   // $password="1234";
+   $password="";
+    $db_name="students_data#44b";
     $conn=mysqli_connect($sname,$uname,$password,$db_name);
     
     if(!$conn){
