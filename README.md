@@ -1,6 +1,6 @@
 # FLC-Hackfest-2022 - Technoflash
 
-## Problem Statement: 
+## 📌 Problem Statement: 
 
 There is a need to develop solutions to track all activities of a student including academic progress in real-time. Often it is observed that students are also good at co-curricular activities. In the current situation, it is not possible for a lecturer to pay attention to every student. Hence a web portal
 
@@ -10,7 +10,7 @@ There is a need to develop solutions to track all activities of a student includ
 
 - Student’s academic performance maintained in the same platform (portal).
 
-## Software used:
+## Techstacks used 💻
 
 Frontend - `HTML`, `CSS`, `JavaScript`, `Bootstrap`
 
@@ -22,7 +22,7 @@ Database - `MySQL`
 
 Code Editor - `VSCode`
 
-## Figma Design File
+## Figma Design File 
 
 <a href="https://drive.google.com/drive/u/0/folders/1k2eTT4cJ1g9lIhgD5j9JNkvrxRPohUfL" target="_blank">Design File </a>
 
@@ -37,12 +37,12 @@ https://code.visualstudio.com/download
 
 https://www.apachefriends.org/download.html 
 
-## Contributing to the project
+## Steps to run the project
 
 **Clone the repo and put it in htdocs folder of xampp :** 
 
 ```bash
-git clone https://github.com/SassyAjumma/Technoflassh.git
+git clone https://github.com/pkini2002/FLC-Hackfest-Technoflash.git
 ```
 
 ```
@@ -58,6 +58,9 @@ localhost/
 ```
 
 **Open PHPMyAdmin in the browser and import the database file-**
+<br/><br/>
+<p>Make sure to change the username,password and server port address in case you have a different one in db_conn.php file</p>
+<br/>
 
 ```
 localhost/phpmyadmin/
@@ -67,12 +70,12 @@ localhost/phpmyadmin/
 
 (Ensure proper internet connection)
 
-## Contributing to the project
+## Contributing to the project 
 
 **Clone the repo and put it in htdocs folder of xampp :** 
 
 ```bash
-git clone https://github.com/SassyAjumma/Technoflassh.git
+git clone https://github.com/pkini2002/FLC-Hackfest-Technoflash.git
 ```
 
 **Do necessary changes if any and add your code to the staging area**
