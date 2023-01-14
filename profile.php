@@ -51,8 +51,8 @@
         <a href='#'> <i class='fa-solid fa-ellipsis-vertical'></i></a>
         <ul class='dropdown'>
          <li><a href='newdashboard.php'><i class='fa fa-home'></i> Dashboard</a></li>
-         <li><a href='#'><i class='fa fa-edit'></i> Edit</a></li>
-         <li><a href='#'><i class='fa fa-id-card'></i> Credit</a></li>
+         <li><a href='create_profile.php'><i class='fa fa-edit'></i> Edit</a></li>
+         <li><a href='credit.html'><i class='fa fa-id-card'></i> Credit</a></li>
          <hr>
          <li><a href='logout.php'><i class='fa fa-sign-out'></i>Logout</a></li>
         </ul>
@@ -217,7 +217,7 @@ position: relative;
   else 
 {
   echo "<h2 style='color:blue;'>It seems like you are not registerd:
- <a id='moving' href='signin.php'> <button type='button'style='color:green;'>click here</button></a></h2>";
+ <a id='moving' href='login.php'> <button type='button'style='color:green;'>click here</button></a></h2>";
 }
 
 ?>

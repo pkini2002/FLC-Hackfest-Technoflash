@@ -11,6 +11,12 @@
     <title>Document Upload</title>
 </head>
 <body>
+    <?php
+
+session_start();
+  if(isset($_SESSION['USN']))
+  {
+    echo '
  <div class="container">
     <h1 class="heading">Document Upload<br> and Co-curricular activity updates</h1>
     <hr>
@@ -22,7 +28,7 @@
             <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <ul>
                 <li>
-                <input type='text' class='form-input' placeholder='Enter your usn' name='usn'
+                <input type="text" class="form-input" placeholder="Enter your usn" name="usn"
                 style="width: 100%;
                 display: block;
                 font-size: 1rem;
@@ -118,14 +124,21 @@
     <hr class="hr2">
 
 
+';
+  }
+?>
    
      <?php
-         if(isset($_GET['error'])):?> 
-         <p><?php echo $_GET['error']; ?></p>
+         if(isset($_GET["error"])):?> 
+         <p><?php echo $_GET["error"]; ?></p>
      <?php endif ?>
 
  
+     <?php
 
+  if(isset($_SESSION['USN']))
+  {
+    echo '
     <!-- Document upload section -->
     <p class="p2"><b>Document Uploads Section</b></p>
     <br/>
@@ -158,3 +171,12 @@
  <script type="text/javascript" src="docupload.js"></script>
 </body>
 </html>
+';
+  }
+  
+  else 
+  {
+    echo "<h2 style='color:blue;'>It seems like you are not registerd:
+   <a id='moving' href='login.php'> <button type='button'style='color:green;'>click here</button></a></h2>";
+  }
+  ?>

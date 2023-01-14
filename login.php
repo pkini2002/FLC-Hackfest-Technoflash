@@ -34,7 +34,6 @@ if($method=='POST')// it work only when we submitte form.at that time method is 
 {
   if($authenticating==4587)
   {
-    $keyd=" ";
     $alert=false;
     @$usernam=$_POST['Username'];
     @$Password=$_POST['Password'];
@@ -42,7 +41,7 @@ if($method=='POST')// it work only when we submitte form.at that time method is 
     $data8=mysqli_query($conn,$sql8);
     while($fetch2=mysqli_fetch_assoc($data8))
     {
-     @ $keyd=$fetch2['keyshow'];
+      $keyd=$fetch2['keyshow'];
           $username=$fetch2['USN'];
   $upassword=$fetch2['Password'];
   $name=$fetch2['Name'];
@@ -65,6 +64,9 @@ session_start();
  header("location:profile.php");
  }
  else
+ session_start();
+ $_SESSION['USN']=$username;
+ $_SESSION['Name']=$name;
  header("location:create_profile.php");
 }
 else

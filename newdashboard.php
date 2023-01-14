@@ -5,7 +5,9 @@
  include 'db_conn.php';
  session_start();
  include 'starter.php';
-?>
+ if(isset($_SESSION['USN']))
+ {
+    echo '
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,36 +21,36 @@
 <div class="sidebar active">
         <div class="logo_content">
             <div class="logo">
-                <i class='bx bxl-c-plus-plus' style="font-size: 30px;"></i>
+                <i class="bx bxl-c-plus-plus" style="font-size: 30px;"></i>
                 <div class="logoname" style="margin-left: 5px;">NMAMIT-NITTE</div>
             </div>
-            <i class='bx bx-menu-alt-right' id="btn" style="font-size: 25px;"></i>
+            <i class="bx bx-menu-alt-right" id="btn" style="font-size: 25px;"></i>
         </div>
         <ul class="nav_list">
             <li>
                 <a href="#">
-                    <i class='bx bx-grid-alt'></i>
+                    <i class="bx bx-grid-alt"></i>
                     <span class="link_names">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="Dashboard.php">
-                    <i class='bx bx-user' ></i>
+                <a href="profile.php">
+                    <i class="bx bx-user" ></i>
                     <span class="link_names">Profile</span>
                 </a>
                 <span class="tooltip">Profile</span>
             </li>
             <li>
                 <a href="docupload.php">
-                    <i class='bx bx-chat' ></i>
+                    <i class="bx bx-chat" ></i>
                     <span class="link_names">Doc Upload</span>
                 </a>
                 <span class="tooltip">Doc Upload</span>
             </li>
             <li>
                 <a href="logout.php">
-                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <i class="bx bx-pie-chart-alt-2" ></i>
                     <span class="link_names">Logout</span>
                 </a>
                 <span class="tooltip">Logout</span>
@@ -56,28 +58,37 @@
         </ul>
         <div class="profile_content">
             <div class="profile">
-                <i class='bx bx-log-out' id="log_out"></i>
+                <i class="bx bx-log-out" id="log_out"></i>
             </div>
         </div>
     </div>
-    <div class="home_content">
+    <div class="home_content">';
+ }
+    ?>
         <?php 
-          $usn=$_SESSION['USN'];
+          @$usn=$_SESSION['USN'];
+          if(isset($_SESSION['USN']))
+ {
           $result="select * from `profile` where USN='$usn'";
           $result_query=mysqli_query($conn,$result);
           while($row=mysqli_fetch_assoc($result_query)){
             $name=$row['name1'];
             echo " <div class='text' style='text-align:center;margin-top:30px;font-size:40px'>Welcome $name!!</div>";
           }
-          echo "<h3 style='text-align:center;'>Documents Uploaded</h3>";
+          echo "<h3 style='text-align:center;'>Documents Uploaded</h3>";}
         ?>
          <p></p>
         <?php
-             $usn=$_SESSION['USN'];
+             @$usn=$_SESSION['USN'];
+             if(isset($_SESSION['USN']))
+ {
              $result="select * from `images` where USN='$usn'";
              $result_query=mysqli_query($conn,$result);
-             while($row=mysqli_fetch_assoc($result_query)){
-                $files_list=$row['file_name'];
+             $row2=mysqli_num_rows($result_query);
+             if($row2)
+             {
+             while($rw=mysqli_fetch_assoc($result_query)){
+                $files_list=$rw['file_name'];
                 $indi_file_name=explode(",",$files_list); //used to convert string to an array
                 echo "<div class='row'>";
                 for ($i=0; $i <count($indi_file_name); $i++){
@@ -90,20 +101,30 @@
                 }
                 echo "</div>";
              }
+            }
+            else
+            {
+                echo "your uploaded document shown here<br>";
+                
+            }
             
              $marks="select * from `students_detail34` where USN='.$usn.'";
-             $result_query=mysqli_query($conn,$marks);
+             $result_query1=mysqli_query($conn,$marks);
+             $row=mysqli_num_rows($result_query1);
+             echo $row;
+             if($row)
+             {
 
-             while($row=mysqli_fetch_assoc($result_query)){
-                $marks1=$row['21CS301'];
-                $marks2=$row['21CS302'];
-                $marks3=$row['21CS303'];
-                $marks4=$row['21CS304'];
-                $marks5=$row['21HU312'];
-                $tot_marks=$row['CIE'];
-                $mark_obtained=$row['Obtained'];
-                $percentage=$row['PERCENTAGE'];
-                $classes_held=$row['CLASS_HELD'];
+             while($rw2=mysqli_fetch_assoc($result_query1)){
+              @  $marks1=$rw2['21CS301'];
+              @  $marks2=$rw2['21CS302'];
+               @ $marks3=$rw2['21CS303'];
+               @ $marks4=$rw2['21CS304'];
+               @ $marks5=$rw2['21HU312'];
+                @$tot_marks=$rw2['CIE'];
+               @ $mark_obtained=$rw2['Obtained'];
+               @ $percentage=$rw2['PERCENTAGE'];
+              @  $classes_held=$rw2['CLASS_HELD'];
             }
 
             
@@ -157,12 +178,74 @@
             </tr>
             </table>
             ";
+        }
+        else 
+        {
+            
+            echo "<table class='table'>
+            <tr>
+               <th>Course Code</th>
+               <th>Max Marks</th>
+               <th>Marks Obtained</th>
+               <th>Class Held</th>
+               <th>Class Attended</th>
+            </tr>
+
+            <tr>
+                 <td>21CS301</td>
+                 <td>50</td>
+                 <td></td>
+                 <td></td>
+                 <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS302</td>
+               <td>50</td>
+               <td></td>
+               <td></td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS303</td>
+               <td>50</td>
+               <td></td>
+               <td></td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21CS304</td>
+               <td>50</td>
+               <td></td>
+               <td></td>
+               <td>45</td>
+            </tr>
+
+            <tr>
+               <td>21HU312</td>
+               <td>50</td>
+               <td></td>
+               <td></td>
+               <td>45</td>
+            </tr>
+            </table>
+            ";
+            
+        
+            
+        }
+
+        }
+        else 
+{
+  echo "<h2 style='color:blue;'>It seems like you are not registerd:
+ <a id='moving' href='login.php'> <button type='button'style='color:green;'>click here</button></a></h2>";
+}
          ?> 
 
-         <?php
-             
-             
-         ?>
+         
     
     </div>
     <script>
@@ -179,6 +262,7 @@
     </script>
 <?php 
    include 'end.php';
+   
 ?>
 </body>
 </html>

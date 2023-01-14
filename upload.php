@@ -54,7 +54,7 @@ if(isset($_POST["submit"])){
             The files has been uploaded successfully!</strong><br/>
            <br>
             <button class='btn btn-success delete-post' style='width:200px;position: relative;left: 1%;''>
-            <a href='newdashboard.php' style='text-decoration:none;color:#fff;'>
+            <a href='profile.php' style='text-decoration:none;color:#fff;'>
             Go to Dashboard
             </a>
             </button>
