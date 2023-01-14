@@ -111,7 +111,7 @@
              $marks="select * from `students_detail34` where USN='.$usn.'";
              $result_query1=mysqli_query($conn,$marks);
              $row=mysqli_num_rows($result_query1);
-             echo $row;
+             
              if($row)
              {
 
