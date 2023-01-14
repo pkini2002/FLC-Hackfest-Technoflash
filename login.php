@@ -64,10 +64,12 @@ session_start();
  header("location:profile.php");
  }
  else
+ {
  session_start();
  $_SESSION['USN']=$username;
  $_SESSION['Name']=$name;
  header("location:create_profile.php");
+ }
 }
 else
 echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
@@ -97,7 +99,7 @@ $sql=mysqli_query($conn,$data1);
 $row=mysqli_num_rows($sql);
 if($row)
 $btn=true;
-$keyshow="4n ";
+
 //echo $row;
 if(($password==$cnpassword)&&(!$row))
 $tab=true;
@@ -105,6 +107,7 @@ $tab=true;
 
 if($tab)
 { $encryption=password_hash($password,PASSWORD_DEFAULT);
+  $keyshow="4n ";
     $data2="INSERT INTO `logindetail966`(`Id`, `Name`, `USN`, `Password`, `RegisteredDate`,`keyshow`) VALUES (NULL,'$name','$user_id', '$encryption', current_timestamp(),'$keyshow')";
     $sql2=mysqli_query($conn,$data2);
     //var_dump($sql2);

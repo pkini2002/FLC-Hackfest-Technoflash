@@ -125,6 +125,14 @@
                @ $mark_obtained=$rw2['Obtained'];
                @ $percentage=$rw2['PERCENTAGE'];
               @  $classes_held=$rw2['CLASS_HELD'];
+
+             @ $at1=$rw2['21cs301a'];
+              @  $at2=$rw2['21cs302a'];
+               @ $at3=$rw2['21cs303a'];
+               @ $at4=$rw2['21cs304a'];
+               @ $at5=$rw2['21hu312a'];
+
+
             }
 
             
@@ -142,7 +150,7 @@
                  <td>50</td>
                  <td>$marks1</td>
                  <td>$classes_held</td>
-                 <td>45</td>
+                 <td>$at1</td>
             </tr>
 
             <tr>
@@ -150,7 +158,7 @@
                <td>50</td>
                <td>$marks2</td>
                <td>$classes_held</td>
-               <td>45</td>
+               <td>$at2</td>
             </tr>
 
             <tr>
@@ -158,7 +166,7 @@
                <td>50</td>
                <td>$marks3</td>
                <td>$classes_held</td>
-               <td>45</td>
+               <td>$at3</td>
             </tr>
 
             <tr>
@@ -166,7 +174,7 @@
                <td>50</td>
                <td>$marks4</td>
                <td>$classes_held</td>
-               <td>45</td>
+               <td>$at4</td>
             </tr>
 
             <tr>
@@ -174,7 +182,7 @@
                <td>50</td>
                <td>$marks5</td>
                <td>$classes_held</td>
-               <td>45</td>
+               <td>$at5</td>
             </tr>
             </table>
             ";

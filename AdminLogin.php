@@ -38,7 +38,7 @@ if($flag)
 session_start();
 // $_SESSION['USN']=$username;
  $_SESSION['Name']=$name;
-header("location:ReportEntry.php?welcome=8436");
+header("location:ReportEntry2.php?welcome=8436");
 }
 
 else
