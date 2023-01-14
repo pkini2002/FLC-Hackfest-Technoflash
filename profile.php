@@ -52,7 +52,7 @@
         <ul class='dropdown'>
          <li><a href='newdashboard.php'><i class='fa fa-home'></i> Dashboard</a></li>
          <li><a href='create_profile.php'><i class='fa fa-edit'></i> Edit</a></li>
-         <li><a href='credit.html'><i class='fa fa-id-card'></i> Credit</a></li>
+         <li><a href='credit.html'><i class='fa fa-id-card'></i> Aboutus</a></li>
          <hr>
          <li><a href='logout.php'><i class='fa fa-sign-out'></i>Logout</a></li>
         </ul>
