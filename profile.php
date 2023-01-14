@@ -73,6 +73,21 @@
             $name=$fetch2['name1'];
             $desc=$fetch2['description1'];
       }
+
+      $sql32="SELECT * FROM `students_detail34` WHERE `USN`='.$usn.'";
+      $data80=mysqli_query($conn,$sql32);
+      $row=mysqli_num_rows($data80);
+      if($row)
+      {
+      while($fetch21=mysqli_fetch_assoc($data80))
+      {
+            $cgp=$fetch21['CLASSES_ATTENDED'];
+      }
+    }
+    else{
+      $cgp=9.5;
+    }
+
      
 echo "
 <div class='profile-card-middle'>
@@ -89,7 +104,7 @@ position: relative;
  
           
       </div>
-      <h1><u>".$_SESSION['Name']."</u></h1>
+      <h1><u>".$name."</u></h1>
 <h1>".$_SESSION['USN']."</h1>
       <p><b>
        ".$desc."
@@ -99,7 +114,7 @@ position: relative;
        <div class='social-data'>
       <div>
         <h5>CGPA</h5>
-        <span>9.4</span>
+        <span>$cgp</span>
       </div>
       <div>
         <h5>SGPA</h5>

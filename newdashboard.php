@@ -75,7 +75,7 @@
             $name=$row['name1'];
             echo " <div class='text' style='text-align:center;margin-top:30px;font-size:40px'>Welcome $name!!</div>";
           }
-          echo "<h3 style='text-align:center;'>Documents Uploaded</h3>";}
+         }
         ?>
          <p></p>
         <?php
