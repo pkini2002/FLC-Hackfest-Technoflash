@@ -24,11 +24,11 @@ Code Editor - `VSCode`
 
 ## Figma Design File 
 
-<a href="https://drive.google.com/drive/u/0/folders/1k2eTT4cJ1g9lIhgD5j9JNkvrxRPohUfL" target="_blank">Design File </a>
+<a href="https://drive.google.com/file/d/10tudXYHhKj4QX60Y6QvvpOJHEB2-DPvB/view?usp=sharing" target="_blank">Design File </a>
 
 ## Demo Video link (A walk through the website)
 
-<a href="https://drive.google.com/drive/u/0/folders/1k2eTT4cJ1g9lIhgD5j9JNkvrxRPohUfL">Project-Demo</a>
+<a href="https://drive.google.com/file/d/1dEZfWDrJguHEaJNXq9LLgNIFS__MfFVW/view?usp=sharing">Project-Demo</a>
 
 ## Software Installation 
 
