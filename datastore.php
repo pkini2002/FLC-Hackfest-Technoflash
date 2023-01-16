@@ -1,10 +1,6 @@
 <?php
 // Include the database configuration file
 include 'db_conn.php';
-$targetDir = "uploads/";
-$fileName = basename($_FILES['file']['name']);
-$targetFilePath = $targetDir . $fileName;
-
 include 'starter.php';
 
    if(isset($_POST["submit"])){
@@ -15,9 +11,14 @@ include 'starter.php';
         $linkedin=$_POST['linkedin'];
         $github=$_POST['github'];
      
-
+        $targetDir = 'uploads/';
+        
         $file1=$_FILES['file']['name'];
+        $fileName = basename($file1);
+        $targetFilePath = $targetDir . $fileName;
+       // echo $targetFilePath;
         $file_temp1=$_FILES['file']['tmp_name'];
+        move_uploaded_file($file_temp1,$targetFilePath);
 
         $data=[];
         $data=[$file1];

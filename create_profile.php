@@ -36,7 +36,7 @@ if($message==440)
     <input type='text' class='form-input' placeholder='Enter your email' name='email'>
     <input type='text' class='form-input' placeholder='Enter your Linkedin URL' name='linkedin'>
     <input type='text' class='form-input' placeholder='Enter your Github URL' name='github'>
-    <input type='file' name='file' />
+    <input type='file' name='file'>
     <input type='submit' value='submit' name='submit' class='send-btn btn'>
   </form>
 </body>
