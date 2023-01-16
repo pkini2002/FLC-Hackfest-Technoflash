@@ -36,10 +36,24 @@ if(isset($_POST["submit"])){
     $images=implode(',',$data);
 
     // Query
+    $flg=false;
+    $sql9="SELECT * FROM `images` WHERE `USN` ='$usn'";
+    $data9=mysqli_query($conn,$sql9);
+    $row=mysqli_num_rows($data9);
+    if($row)
+    {
+        $sql10="UPDATE `images` SET  `file_name` = '$images',  `uploaded_on` = NOW(), `clubs` = ' $val'  WHERE `images`.`USN` = '$usn'"; 
+        $connect24=mysqli_query($conn,$sql10);
+       $flg=true;
+    }
+    else{
     $query="INSERT into images (USN,file_name, uploaded_on,clubs) VALUES ('".$usn."','".$images."', NOW(),'". $val."')";
     $connect=mysqli_query($conn,$query);
+    $flg=true;
+    }
+    if($flg)
 
-    if($connect){
+    {
         move_uploaded_file($_FILES["file1"]["tmp_name"], $targetFilePath);
         move_uploaded_file($_FILES["file2"]["tmp_name"], $targetFilePath1);
         move_uploaded_file($_FILES["file3"]["tmp_name"], $targetFilePath2);

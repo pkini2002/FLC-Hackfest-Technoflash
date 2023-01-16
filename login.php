@@ -41,6 +41,7 @@ if($method=='POST')// it work only when we submitte form.at that time method is 
     $data8=mysqli_query($conn,$sql8);
     while($fetch2=mysqli_fetch_assoc($data8))
     {
+      $keyd=$fetch2['keyshow'];
           $username=$fetch2['USN'];
   $upassword=$fetch2['Password'];
   $name=$fetch2['Name'];
@@ -54,11 +55,22 @@ if($method=='POST')// it work only when we submitte form.at that time method is 
 if($alert)
 {
 //starting the session.
+if($keyd==$username)
+{
 session_start();
   $_SESSION['USN']=$username;
   $_SESSION['Name']=$name;
-  header("location:Dashboard.php?welcome=8436");
+ // header("location:Dashboard.php?welcome=8436");
+ header("location:profile.php");
  }
+ else
+ {
+ session_start();
+ $_SESSION['USN']=$username;
+ $_SESSION['Name']=$name;
+ header("location:create_profile.php");
+ }
+}
 else
 echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
 <strong>Oops!</strong> It seems like user not register or password is incorrect.
@@ -87,6 +99,7 @@ $sql=mysqli_query($conn,$data1);
 $row=mysqli_num_rows($sql);
 if($row)
 $btn=true;
+
 //echo $row;
 if(($password==$cnpassword)&&(!$row))
 $tab=true;
@@ -94,7 +107,8 @@ $tab=true;
 
 if($tab)
 { $encryption=password_hash($password,PASSWORD_DEFAULT);
-    $data2="INSERT INTO `logindetail966`(`Id`, `Name`, `USN`, `Password`, `RegisteredDate`) VALUES (NULL,'$name','$user_id', '$encryption', current_timestamp())";
+  $keyshow="4n ";
+    $data2="INSERT INTO `logindetail966`(`Id`, `Name`, `USN`, `Password`, `RegisteredDate`,`keyshow`) VALUES (NULL,'$name','$user_id', '$encryption', current_timestamp(),'$keyshow')";
     $sql2=mysqli_query($conn,$data2);
     //var_dump($sql2);
     if($sql2)
