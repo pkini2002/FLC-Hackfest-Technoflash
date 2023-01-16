@@ -136,7 +136,8 @@
             }
 
             
-            echo "<table class='table'>
+            echo " <br/>
+            <table class='table table-striped'>
             <tr>
                <th>Course Code</th>
                <th>Max Marks</th>
@@ -239,6 +240,14 @@
                <td>45</td>
             </tr>
             </table>
+
+            <div class='container'>
+            <b>Marks Obtained: </b> $mark_obtained
+            <br/>
+            <b>Total marks: </b> $tot_marks
+            <br/>
+            <b>Percentage: </b> $percentage %
+            </div>
             ";
             
         

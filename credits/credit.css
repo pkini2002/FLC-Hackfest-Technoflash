@@ -1,0 +1,292 @@
+body{
+    margin: 0;
+    background-color: rgb(117, 116, 116);
+}
+.pearl{
+    height: 100vh;
+    background-color:rgb(200, 112, 25);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.pearl1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(pearl.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+
+
+   
+.pearl2{
+    height: 30vh;
+    background-image: url(pearl2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+border-radius: 20px;
+transition: 0.5s;}
+.pearl2:hover{
+    transform: scale(1.05);
+
+}
+.prathiksha{
+    height: 100vh;
+    background-color:rgb(232, 132, 32);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.prathiksha1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(prathiksha.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px; 
+    box-shadow: 5px 5px 10px rgb(50, 40, 40) ;
+    background-attachment: fixed;
+}
+
+
+.prathiksha2{
+    height: 30vh;
+    background-image: url(pratheeksha2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.prathiksha2:hover{
+    transform: scale(1.05);
+}
+.swapnil{
+    height: 100vh;
+    background-color:rgb(200, 112, 25);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.swapnil1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(swapnil.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.swapnil2{
+    height: 30vh;
+    background-image: url(swapnil2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.swapnil2:hover{
+    transform: scale(1.05);
+
+}
+.vivek{
+    height: 100vh;
+    background-color:rgb(232, 132, 32);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.vivek1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(vivek.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.vivek2{
+    height: 30vh;
+    background-image: url(vivek2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.vivek2:hover{
+    transform: scale(1.05);
+
+}
+.ganapati{
+    height: 100vh;
+    background-color:rgb(200, 112, 25);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.ganapati1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(ganapati.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.ganapati2{
+    height: 30vh;
+    background-image: url(ganapathi2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.ganapati2:hover{
+    transform: scale(1.05);
+
+}
+.mladen{
+    height: 100vh;
+    background-color:rgb(232, 132, 32);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.mladen1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(mladen.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.mladen2{
+    height: 30vh;
+    background-image: url(mladen2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.mladen2:hover{
+    transform: scale(1.05);
+
+}
+.preetham{
+    height: 100vh;
+    background-color:rgb(200, 112, 25);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.preetham1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(preetham.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.preetham2{
+    height: 30vh;
+    background-image: url(preetham2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.preetham2:hover{
+    transform: scale(1.05);
+
+}
+.dhanya{
+    height: 100vh;
+    background-color:rgb(232, 132, 32);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    border: 90px;
+    display: block;  
+}
+.dhanya1{
+    
+    height: 60vh; 
+    background-color: rgb(65, 52, 80);
+    border-radius: 20px;
+    background-image: url(dhanya.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;  
+    box-shadow: 5px 5px 10px rgb(50, 40, 80) ; 
+    background-attachment: fixed;
+   
+}
+.dhanya2{
+    height: 30vh;
+    background-image: url(Dhanya2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 20px;
+    transition: 0.5s;
+   
+}
+.dhanya2:hover{
+    transform: scale(1.05);
+
+}
