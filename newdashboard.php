@@ -111,7 +111,7 @@
              $marks="select * from `students_detail34` where USN='.$usn.'";
              $result_query1=mysqli_query($conn,$marks);
              $row=mysqli_num_rows($result_query1);
-             
+             $ch =false;
              if($row)
              {
 
@@ -131,7 +131,7 @@
                @ $at3=$rw2['21cs303a'];
                @ $at4=$rw2['21cs304a'];
                @ $at5=$rw2['21hu312a'];
-
+$ch=true;
 
             }
 
@@ -239,8 +239,13 @@
                <td></td>
                <td>45</td>
             </tr>
-            </table>
+            </table>";
+        }
+        
 
+if($ch)
+{
+    echo "
             <div class='container'>
             <b>Marks Obtained: </b> $mark_obtained
             <br/>
@@ -249,12 +254,12 @@
             <b>Percentage: </b> $percentage %
             </div>
             ";
-            
+}
         
             
         }
 
-        }
+        
         else 
 {
   echo "<h2 style='color:blue;'>It seems like you are not registerd:
